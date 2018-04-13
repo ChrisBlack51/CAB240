@@ -7,6 +7,7 @@
 </head>
 <body>
 
+    <div id="top">
         <div class="topnav" id="topnav">
                 <div id="main">
                     <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
@@ -30,6 +31,25 @@
             <a href="#">Clients</a>
             <a href="#">Contact</a>
         </div>
+        <script>
+                function openNav() {
+                    document.getElementById("mySidenav").style.width = "20%";
+                    document.getElementById("topnav").style.marginLeft = "20%";
+                }
+                   
+                function closeNav() {
+                    document.getElementById("mySidenav").style.width = "0";
+                    document.getElementById("topnav").style.marginLeft = "0";
+                }
+                </script>
+        <div id="breadcrumb">
+            <ul class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Search Page</a></li>
+                <li>Search Results</li>
+            </ul>
+        </div>
+    </div>
         
         <div id="result-container">
             <h1 id="result-title">Results:</h1>

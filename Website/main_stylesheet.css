@@ -77,6 +77,39 @@ body {
   }
 }
 
+#breadcrumb {
+  background-color: #e9e9e9;
+  float: top;
+}
+
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: #e9e9e9;
+  margin: 0;
+}
+
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+
 #main {
   transition: margin-left .5s;
   float: left;
@@ -131,13 +164,13 @@ body {
 }
 
 .footer {
-  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   background-color: #2196F3;
   color: white;
   text-align: center;
+  padding: 0.5%;
 }
 
 .backmap {
@@ -343,3 +376,4 @@ h2:visited {
       display: none;
   }
 }
+
