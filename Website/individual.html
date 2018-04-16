@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Single Result</title>
+    <!--CSS link-->
+    <link rel="stylesheet" type="text/css" href="css\main_stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--JavaScript link-->
+    <script src="C:\Users\Chros\Documents\GitHub\CAB240\Website\javascript\main_script.js"></script>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <!--"Header" navigation-->
+    <div id="top">
+        <div class="topnav" id="topnav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <div class="search-container">
+                <form action="/action_page.php">
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <!--Breadcrumb-->
+        <div id="breadcrumb">
+            <ul class="breadcrumb">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>Search Page</li>
+            </ul>
+        </div>
+    </div>
+    <!--Google Map Api + Search Field-->
+    <div class="backmap">
+        <!--Api with google api key-->
+
+        <!--Body/Info-->
+        <div id="result-content">
+            <h2>City Botanic Gardens Wi-Fi</h2>
+            <div id="smallMap" style="width:40%;height:400px;"></div>
+            <script>
+                function singleMap() {
+                    var myCenter = new google.maps.LatLng(-27.47561, 153.03005);
+                    var mapCanvas = document.getElementById("smallMap");
+                    var mapOptions = { center: myCenter, zoom: 16 };
+                    var map = new google.maps.Map(mapCanvas, mapOptions);
+                    var marker = new google.maps.Marker({ position: myCenter });
+                    marker.setMap(map);
+                }
+            </script>
+            <div id="reviews">
+                <span class="heading">Average Rating</span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <p>4.1 average based on 254 reviews.</p>
+                <hr style="border:3px solid #f1f1f1">
+
+                <div class="row">
+                    <div class="side">
+                        <div>5 star</div>
+                    </div>
+                    <div class="middle">
+                        <div class="bar-container">
+                            <div class="bar-5"></div>
+                        </div>
+                    </div>
+                    <div class="side right">
+                        <div>150</div>
+                    </div>
+                    <div class="side">
+                        <div>4 star</div>
+                    </div>
+                    <div class="middle">
+                        <div class="bar-container">
+                            <div class="bar-4"></div>
+                        </div>
+                    </div>
+                    <div class="side right">
+                        <div>63</div>
+                    </div>
+                    <div class="side">
+                        <div>3 star</div>
+                    </div>
+                    <div class="middle">
+                        <div class="bar-container">
+                            <div class="bar-3"></div>
+                        </div>
+                    </div>
+                    <div class="side right">
+                        <div>15</div>
+                    </div>
+                    <div class="side">
+                        <div>2 star</div>
+                    </div>
+                    <div class="middle">
+                        <div class="bar-container">
+                            <div class="bar-2"></div>
+                        </div>
+                    </div>
+                    <div class="side right">
+                        <div>6</div>
+                    </div>
+                    <div class="side">
+                        <div>1 star</div>
+                    </div>
+                    <div class="middle">
+                        <div class="bar-container">
+                            <div class="bar-1"></div>
+                        </div>
+                    </div>
+                    <div class="side right">
+                        <div>20</div>
+                    </div>
+                </div>
+            </div>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_l2YWb5MNp1wgIe2XdbzLwyKH8vI5LhA&callback=singleMap"></script>
+            <div id="user_input">
+                <form class="user_review">
+                    <h3>Leave a review:</h3>
+                    <input id="type_review" type="text" name="review">
+                    <input type="submit" value="Submit">
+                </form>
+                <h4>Address:<br>
+                Alice Street</h4>
+                <h4>Subrub:<br>
+                Brisbane City</h4>
+            </div>
+            <div id="user_reviews">
+                <h4>Great Place to be!</h4>
+                <h5><i>~ John Smith</i></h5>
+                <h6><i>04.04.2018</i></h6>
+                <h4>Great Connection</h4>
+                <h5><i>~ Jane Doe</i></h5>
+                <h6><i>16.04.2018</i></h6>
+            </div>
+        </div>
+    </div>
+    <!--Footer-->
+    <div class="footer">
+        <p>Created by: Insert names</p>
+        <p>Subject: </p>
+    </div>
+
+</body>
+
+</html>

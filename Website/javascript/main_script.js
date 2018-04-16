@@ -17,3 +17,12 @@ function openFunction() {
 function closeFunction() {
     document.getElementById("user_rating").style.display = "none";
 }
+function singleMap() {
+    // Settings of the Map (Location and Zoom Magnification)
+    var mapProp = {
+        center: new google.maps.LatLng(-27.47561, 153.03005),
+        zoom: 16,
+    };
+    //Identify the div Id to be executed with
+    var map = new google.maps.Map(document.getElementById("resultMap"), mapProp);
+}
