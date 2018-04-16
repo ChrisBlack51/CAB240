@@ -3,13 +3,16 @@
 
 <head>
   <title>Result</title>
-  <link rel="stylesheet" type="text/css" href="main_stylesheet.css">
+  <!--CSS link-->
+  <link rel="stylesheet" type="text/css" href="C:\Users\Chros\Documents\GitHub\CAB240\Website\css\main_stylesheet.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--JavaScript link-->
+  <script src="C:\Users\Chros\Documents\GitHub\CAB240\Website\javascript\main_script.js"></script>
   <meta charset="UTF-8">
 </head>
 
 <body>
-
+  <!--"Header" navigation-->
   <div id="top">
     <div class="topnav" id="topnav">
       <div id="main">
@@ -27,26 +30,7 @@
         </form>
       </div>
     </div>
-
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Clients</a>
-      <a href="#">Contact</a>
-    </div>
-    <script>
-      function openNav() {
-        document.getElementById("mySidenav").style.width = "20%";
-        document.getElementById("topnav").style.marginLeft = "20%";
-      }
-
-      function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-        document.getElementById("topnav").style.marginLeft = "0";
-      }
-    </script>
+    <!--Breadcrumb-->
     <div id="breadcrumb">
       <ul class="breadcrumb">
         <li>
@@ -55,28 +39,22 @@
         <li>
           <a href="#">Search Page</a>
         </li>
-        <li>Search Results</li>
+        <li>
+          Results..
+        </li>
       </ul>
     </div>
   </div>
-
+  <!--Results-->
   <div id="result-container">
     <h1 id="result-title">Results:</h1>
     <div class="a-result">
 
-      <img src="qut.png" width="120" height="120" alt="Map of Q">
+      <img src="C:\Users\Chros\Documents\GitHub\CAB240\Website\img\qut.png" width="120" height="120" alt="Map of Q">
       <h2>123 King George St, Brisbane City 4000</h2>
       <p class="flip" onclick="openFunction()">View Ratings</p>
-
-      <script>
-        function openFunction() {
-          document.getElementById("user_rating").style.display = "block";
-        }
-        function closeFunction() {
-          document.getElementById("user_rating").style.display = "none";
-        }
-      </script>
     </div>
+    <!--More Info Dropdown-->
     <div id="user_rating">
       <span class="heading">User Rating</span>
       <span class="fa fa-star checked"></span>
@@ -147,19 +125,7 @@
       </div>
     </div>
   </div>
-
-
-  <script>
-    function openNav() {
-      document.getElementById("mySidenav").style.width = "20%";
-      document.getElementById("topnav").style.marginLeft = "20%";
-    }
-
-    function closeNav() {
-      document.getElementById("mySidenav").style.width = "0";
-      document.getElementById("topnav").style.marginLeft = "0";
-    }
-  </script>
+  <!--Footer-->
   <div class="footer">
     <p>Created by: Insert names</p>
     <p>Subject: </p>
