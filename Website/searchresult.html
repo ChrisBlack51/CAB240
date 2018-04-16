@@ -1,69 +1,52 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
-        <title>Search Page</title>
-        <link rel="stylesheet" type="text/css" href="main_stylesheet.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Search Page</title>
+    <!--CSS link-->
+    <link rel="stylesheet" type="text/css" href="css\main_stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--JavaScript link-->
+    <script src="C:\Users\Chros\Documents\GitHub\CAB240\Website\javascript\main_script.js"></script>
+    <meta charset="UTF-8">
 </head>
+
 <body>
+    <!--"Header" navigation-->
     <div id="top">
         <div class="topnav" id="topnav">
-                <div id="main">
-                    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-                </div>
-            <a class="active" href="#home">Home</a>
+            <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
             <div class="search-container">
-            <form action="/action_page.php">
-              <input type="text" placeholder="Search.." name="search">
-              <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
-          </div>
+                <form action="/action_page.php">
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
         </div>
-
-        <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
-        </div>
-        <script>
-                function openNav() {
-                    document.getElementById("mySidenav").style.width = "20%";
-                    document.getElementById("topnav").style.marginLeft = "20%";
-                }
-                   
-                function closeNav() {
-                    document.getElementById("mySidenav").style.width = "0";
-                    document.getElementById("topnav").style.marginLeft = "0";
-                }
-                </script>
         <div id="breadcrumb">
             <ul class="breadcrumb">
-                <li><a href="#">Home</a></li>
+                <li>
+                    <a href="#">Home</a>
+                </li>
                 <li>Search Page</li>
             </ul>
         </div>
     </div>
-
+    <!--Google Map Api + Search Field-->
     <div class="backmap">
-        <div id="googleMap"></div>
-        <script>
-                function myMap() {
-                var mapProp= {
-                    center:new google.maps.LatLng(-27.477254,153.028064),
-                    zoom:12,
-                };
-                var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-                }
-        </script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_l2YWb5MNp1wgIe2XdbzLwyKH8vI5LhA&callback=myMap"></script>
+        <!--Api with google api key-->
+        <div id="googleMap">
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_l2YWb5MNp1wgIe2XdbzLwyKH8vI5LhA&callback=myMap"></script>
+        </div>
         <div class="searchform">
+            <!--Drop down Categories-->
             <div class="dropdown">
-                <button class="dropbtn"><span class="fa fa-bullseye"></span> Select Location</button>
+                <button class="dropbtn">
+                    <span class="fa fa-bullseye"></span> Select Location</button>
                 <div class="dropdown-content">
                     <input type="text" placeholder="Search..." id="myInput" onkeyup="filterFunction()">
                     <a href="#">Link 1</a>
@@ -72,41 +55,67 @@
                 </div>
             </div>
             <div class="dropdown">
-                    <button class="dropbtn"><span class="fa fa-bars"></span> Select Categories</button>
-                    <div class="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div>
+                <button class="dropbtn">
+                    <span class="fa fa-bars"></span> Select Categories</button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
                 </div>
-            <script>
-            
-            </script>
+            </div>
+            <!--Search field-->
             <input type="text" placeholder="Search.." name="search">
-            <button type="submit"><i class="fa fa-search"></i></button>
+            <button type="submit">
+                <i class="fa fa-search"></i>
+            </button>
         </div>
-        
     </div>
+    <!--Body/Info-->
     <div id="search-content">
         <h2>Lorum ipsum</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac cursus ex. Duis congue lectus quis sem mattis, ac elementum ante tincidunt. Nullam sed ex eu quam iaculis tristique tristique eget lacus. Proin elementum enim vitae dictum consectetur. Suspendisse a neque at odio ultricies scelerisque. Cras finibus mattis lobortis. Integer quis dui sed mauris egestas fringilla. Nunc gravida nec nulla et viverra. Donec dapibus eu quam in porta. Sed mattis est non quam porta scelerisque sed et erat. Quisque ut congue ipsum, vel aliquet risus. Nulla hendrerit elit quis ante pretium convallis. Suspendisse rhoncus justo mi, in interdum orci mollis id. Ut sodales elit velit. Nullam efficitur et elit id varius. Aliquam eget risus augue.
-            </p>
-            Sed id lobortis tortor. Maecenas interdum feugiat vestibulum. Nulla in nibh venenatis, posuere nunc ac, ultricies libero. Nunc eu volutpat felis. Morbi non diam id lorem interdum molestie sed viverra mauris. Phasellus imperdiet, massa vel auctor consequat, sapien massa finibus magna, sit amet tempor odio lacus quis sem. Maecenas leo mi, feugiat vitae scelerisque id, facilisis id massa. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-            <p>
-            Curabitur id gravida magna, et molestie nulla. Nunc quis venenatis est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet nisl eu ante fermentum malesuada ac venenatis lectus. Fusce sed lorem a eros sodales scelerisque. Mauris euismod leo a urna sodales varius. Vivamus a euismod tortor. Morbi id egestas metus, vel vehicula nibh. Nulla ultrices lacus nulla, eu commodo est interdum non. Praesent convallis dui non rhoncus malesuada. Nullam nibh est, imperdiet feugiat erat sed, maximus cursus eros. Praesent vitae quam pretium sapien volutpat auctor. Pellentesque quis ex vel diam vestibulum iaculis et a enim. Suspendisse commodo enim in tellus iaculis consequat. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-            </p>
-            Curabitur dignissim bibendum orci, at rhoncus orci porttitor non. Quisque ante urna, rhoncus viverra lacinia vehicula, tristique in nisi. Vestibulum tellus risus, blandit in libero ut, convallis tempor erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam lectus magna, ultrices at diam ac, consequat ullamcorper tellus. Donec suscipit sem vitae aliquam laoreet. In egestas leo at nunc vehicula, vitae elementum diam auctor. Praesent dignissim posuere nisi ac aliquet. Integer in nibh ac velit laoreet facilisis vel bibendum felis. Mauris ullamcorper aliquam elementum. Curabitur non venenatis risus, a viverra libero. Mauris nec libero erat. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-            <p>
-            Etiam nulla sapien, tempor a volutpat sed, consequat in turpis. Maecenas accumsan odio elementum magna tempus, sed lobortis dolor congue. Sed quis leo nisi. Morbi facilisis tincidunt sapien maximus tincidunt. Suspendisse tincidunt eros non nisi ullamcorper varius. Nunc ornare, nunc quis mattis bibendum, dui leo dignissim sapien, ut vulputate ex arcu ac ligula. Donec molestie condimentum augue, varius mattis nibh malesuada ornare. Nulla nunc purus, sollicitudin condimentum faucibus eget, rhoncus ac felis. Quisque molestie nulla a urna maximus, ut gravida elit viverra.
-            </p>
-        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac cursus ex. Duis congue lectus quis sem mattis,
+            ac elementum ante tincidunt. Nullam sed ex eu quam iaculis tristique tristique eget lacus. Proin elementum enim
+            vitae dictum consectetur. Suspendisse a neque at odio ultricies scelerisque. Cras finibus mattis lobortis. Integer
+            quis dui sed mauris egestas fringilla. Nunc gravida nec nulla et viverra. Donec dapibus eu quam in porta. Sed
+            mattis est non quam porta scelerisque sed et erat. Quisque ut congue ipsum, vel aliquet risus. Nulla hendrerit
+            elit quis ante pretium convallis. Suspendisse rhoncus justo mi, in interdum orci mollis id. Ut sodales elit velit.
+            Nullam efficitur et elit id varius. Aliquam eget risus augue.
+        </p>
+        Sed id lobortis tortor. Maecenas interdum feugiat vestibulum. Nulla in nibh venenatis, posuere nunc ac, ultricies libero.
+        Nunc eu volutpat felis. Morbi non diam id lorem interdum molestie sed viverra mauris. Phasellus imperdiet, massa
+        vel auctor consequat, sapien massa finibus magna, sit amet tempor odio lacus quis sem. Maecenas leo mi, feugiat vitae
+        scelerisque id, facilisis id massa. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+        <p>
+            Curabitur id gravida magna, et molestie nulla. Nunc quis venenatis est. Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit. Morbi sit amet nisl eu ante fermentum malesuada ac venenatis lectus. Fusce sed lorem a eros sodales scelerisque.
+            Mauris euismod leo a urna sodales varius. Vivamus a euismod tortor. Morbi id egestas metus, vel vehicula nibh.
+            Nulla ultrices lacus nulla, eu commodo est interdum non. Praesent convallis dui non rhoncus malesuada. Nullam
+            nibh est, imperdiet feugiat erat sed, maximus cursus eros. Praesent vitae quam pretium sapien volutpat auctor.
+            Pellentesque quis ex vel diam vestibulum iaculis et a enim. Suspendisse commodo enim in tellus iaculis consequat.
+            Interdum et malesuada fames ac ante ipsum primis in faucibus.
+        </p>
+        Curabitur dignissim bibendum orci, at rhoncus orci porttitor non. Quisque ante urna, rhoncus viverra lacinia vehicula, tristique
+        in nisi. Vestibulum tellus risus, blandit in libero ut, convallis tempor erat. Class aptent taciti sociosqu ad litora
+        torquent per conubia nostra, per inceptos himenaeos. Class aptent taciti sociosqu ad litora torquent per conubia
+        nostra, per inceptos himenaeos. Aliquam lectus magna, ultrices at diam ac, consequat ullamcorper tellus. Donec suscipit
+        sem vitae aliquam laoreet. In egestas leo at nunc vehicula, vitae elementum diam auctor. Praesent dignissim posuere
+        nisi ac aliquet. Integer in nibh ac velit laoreet facilisis vel bibendum felis. Mauris ullamcorper aliquam elementum.
+        Curabitur non venenatis risus, a viverra libero. Mauris nec libero erat. Interdum et malesuada fames ac ante ipsum
+        primis in faucibus.
+        <p>
+            Etiam nulla sapien, tempor a volutpat sed, consequat in turpis. Maecenas accumsan odio elementum magna tempus, sed lobortis
+            dolor congue. Sed quis leo nisi. Morbi facilisis tincidunt sapien maximus tincidunt. Suspendisse tincidunt eros
+            non nisi ullamcorper varius. Nunc ornare, nunc quis mattis bibendum, dui leo dignissim sapien, ut vulputate ex
+            arcu ac ligula. Donec molestie condimentum augue, varius mattis nibh malesuada ornare. Nulla nunc purus, sollicitudin
+            condimentum faucibus eget, rhoncus ac felis. Quisque molestie nulla a urna maximus, ut gravida elit viverra.
+        </p>
+    </div>
+    <!--Footer-->
+    <div class="footer">
+        <p>Created by: Insert names</p>
+        <p>Subject: </p>
+    </div>
 
-
-
-        </body>
-        <div class="footer">
-            <p>Created by: Insert names</p>
-            <p>Subject: </p>
-        </div>
 </body>
+
 </html>
